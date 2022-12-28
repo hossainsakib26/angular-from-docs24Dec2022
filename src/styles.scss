@@ -10,7 +10,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
 
-  //background-color: var(--color5);
 }
 
 :root {
@@ -31,7 +30,7 @@ h2, h3{
 }
 
 body {
-  width: 100%;
+  //width: 100%;
 }
 
 li{
@@ -39,9 +38,10 @@ li{
 }
 
 button{
+
   width: 100%;
-  padding: 1rem;
-  margin: 0.25rem 0;
+  padding: 0.25rem 0;
+  margin: 0.5rem 0;
   background: var(--color5);
   border: none;
   color: white;
@@ -51,12 +51,16 @@ button{
   align-items: center;
   transition: 0.25s;
 
-  .badge{
-    margin-right: 0.5rem;
+  > .badge{
+    height: 100%;
+    width: 20%;
+    padding: 0.5rem;
+    background: var(--color1);
+    //margin-right: 0.5rem;
     font-size: 1.5rem;
     font-weight: 800;
   }
-  .name{
+  > .name{
        font-size: 2rem;
        font-weight: 800;
      }
@@ -66,4 +70,48 @@ button:hover{
   background: var(--color1);
   color: whitesmoke;
   border: solid white 0.05rem;
+}
+
+
+.input-box {
+  width: 100%;
+  position: relative;
+}
+
+.input-box .input {
+  width: 100%;
+  padding: 1rem;
+  border: 0.1rem solid var(--color1);
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1.75rem;
+
+  transition: 1s;
+}
+
+.input-box .input-label {
+  font-size: 1.25rem;
+  color: #264611;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  padding: 1.25rem;
+
+  transition: 0.5s;
+}
+
+.input-box input:valid ~ label, .input-box input:focus ~ label {
+  color: #ffffff;
+  z-index: 3;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 1rem;
+  padding: 0 1rem;
+  background: var(--color1);
+  border-left: 0.2rem solid var(--color1);
+  border-right: 0.2rem solid var(--color1);
+
+  letter-spacing: 0.2rem;
 }

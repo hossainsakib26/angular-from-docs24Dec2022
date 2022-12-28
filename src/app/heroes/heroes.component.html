@@ -37,17 +37,19 @@
       </div>
 
       <div class="edit-form">
-        <label for="name">Hero Name: </label>
-        <input type="text" id="name" [(ngModel)]="selectedHero.name" placeholder="name">
+        <div class="input-box">
+          <input type="text" class="input" name="name" required="required" [(ngModel)]="selectedHero.name">
+          <label for="name" class="input-label">Name</label>
+        </div>
       </div>
 
     </div>
 
   </div>
 
-<!--  <div class="input-container">-->
-<!--    <label for="name2">Name</label>-->
-<!--    <input type="text" id="name2">-->
+<!--  <div class="input-box">-->
+<!--    <input type="text" class="input" name="name" required="required">-->
+<!--    <label for="name" class="input-label">Name</label>-->
 <!--  </div>-->
 
 </div>
