@@ -7,7 +7,9 @@
     </div>
     <ul>
       <li *ngFor="let hero of heroes">
-        <button type="button" (click)="onSelect(hero)">
+        <button type="button" (click)="onSelect(hero)"
+        [class.selected]="hero === selectedHero"
+        >
           <span class="badge">{{hero.id}}</span>
           <span class="name">{{hero.name}}</span>
         </button>
@@ -17,7 +19,7 @@
   </div>
 
   <div class="detail-content">
-    <div class="" *ngIf="selectedHero">
+    <div class="animate__animated animate__bounceIn" *ngIf="selectedHero">
 
       <div class="heading">
         <h2>{{selectedHero.name | uppercase}} Details</h2>
@@ -46,10 +48,4 @@
     </div>
 
   </div>
-
-<!--  <div class="input-box">-->
-<!--    <input type="text" class="input" name="name" required="required">-->
-<!--    <label for="name" class="input-label">Name</label>-->
-<!--  </div>-->
-
 </div>
