@@ -1,29 +1,28 @@
 <!--<div class="detail-content">-->
-  <div class="child-main-div" *ngIf="hero">
+<div class="child-main-div" *ngIf="hero">
 
-    <div class="heading">
-      <h2>{{hero.name | uppercase}} Details</h2>
+  <div class="heading">
+    <h2>{{hero.name | uppercase}} Details</h2>
+  </div>
+
+  <div class="info-section">
+
+    <div class="row">
+      <div class="col">ID:</div>
+      <div class="col">{{hero.id}}</div>
     </div>
-
-    <div class="info-section">
-
-      <div class="row">
-        <div class="col">ID:</div>
-        <div class="col">{{hero.id}}</div>
-      </div>
-      <div class="row">
-        <div class="col">Name:</div>
-        <div class="col">{{hero.name}}</div>
-      </div>
-
-    </div>
-
-    <div class="edit-form">
-      <div class="input-box">
-        <input type="text" id="name" class="input" name="name" required="required" [(ngModel)]="hero.name">
-        <label for="name" class="input-label">Name</label>
-      </div>
+    <div class="row">
+      <div class="col">Name:</div>
+      <div class="col">{{hero.name}}</div>
     </div>
 
   </div>
+
+  <div class="edit-form">
+    <div class="input-box">
+      <input type="text" id="name" class="input" name="name" required="required" [(ngModel)]="hero.name">
+      <label for="name" class="input-label">Name</label>
+    </div>
+  </div>
+</div>
 <!--</div>-->

@@ -111,7 +111,8 @@ button:hover{
   letter-spacing: 0.2rem;
 
   position: absolute;
-  left: 1.25rem;
+  //left: 1.25rem;
+  left: 0;
   pointer-events: none;
   padding: 1.25rem;
 
@@ -123,8 +124,9 @@ button:hover{
   z-index: 3;
   transform: translateX(10px) translateY(-7px);
   font-size: 1rem;
-  padding: 0 1.25rem;
-  margin: 0 1.25rem;
+  //padding: 0 1.25rem;
+  padding: 0 1rem;
+  //margin: 0 1.25rem;
   background: var(--color1);
   border-left: 0.2rem solid var(--color1);
   border-right: 0.2rem solid var(--color1);
